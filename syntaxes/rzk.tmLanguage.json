@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-  "comment": "This TextMate Grammar file has been generated from a YAML file.",
+  "comment": "This TextMate Grammar file has been generated from a Jinja2 YAML template.",
   "name": "rzk-1",
   "patterns": [
     {

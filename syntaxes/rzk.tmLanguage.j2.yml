@@ -51,13 +51,13 @@ repository:
       - name: support.type.rzk
         match: (?<=^|[.\\;,#"\]\[)(}{><|\s])(CUBE|TOPE|U|𝒰)(?=$|[.\\;,#"\]\[)(}{><|\s])
       - name: entity.name.type.rzk
-        match: (?<=^|[.\\;,#"\]\[)(}{><|\s])(1|2|Sigma|∑|Σ)(?=$|[.\\;,#"\]\[)(}{><|\s])
+        match: (?<=^|[.\\;,#"\]\[)(}{><|\s])(1|2|𝟙|𝟚|Sigma|∑|Σ)(?=$|[.\\;,#"\]\[)(}{><|\s])
       - name: string.regexp
-        match: (===|<=|\\/|/\\|≡|≤|∨|∧)
+        match: (===|<=|\\/|/\\)
       - name: support.constant.rzk
-        match: (⊤|⊥|\*(_1|₁)|⋆)|(?<=^|[.\\;,#"\]\[)(}{><|\s])(0(_2|₂)|1(_2|₂)|TOP|BOT)(?=$|[.\\;,#"\]\[)(}{><|\s])
+        match: (⊤|⊥|\*_1|⋆)|(?<=^|[.\\;,#"\]\[)(}{><|\s])(0_2|1_2|TOP|BOT)(?=$|[.\\;,#"\]\[)(}{><|\s])
       - name: support.function.rzk
-        match: (?<=^|[.\\;,#"\]\[)(}{><|\s])(recOR|recBOT|idJ|refl|first|second|π₁|π₂)((?=$|[.\\;,#"\]\[)(}{><|\s])|(?=_{))
+        match: (?<=^|[.\\;,#"\]\[)(}{><|\s])(recOR|rec∨|recBOT|rec⊥|idJ|refl|first|second|π₁|π₂)((?=$|[.\\;,#"\]\[)(}{><|\s])|(?=_{))
       - name: keyword.control.as.rzk
         match: (?<=^|[.\\;,#"\]\[)(}{><|\s])as(?=$|[.\\;,#"\]\[)(}{><|\s])
   param-identifiers:
@@ -76,7 +76,7 @@ repository:
               - include: "#builtins"
   ext-type-topes:
     patterns:
-      - match: ([^|]*)(\|->|↦)
+      - match: ([^|]*)(\|->)
         captures:
           "1":
             name: string.interpolated.rzk
@@ -161,7 +161,7 @@ repository:
       - name: punctuation.comma.rzk
         match: ","
       - name: punctuation.multiplication.rzk
-        match: (?<=^|[.\\;,#"\]\[)(}{><|\s])(\*|×)(?=$|[.\\;,#"\]\[)(}{><|\s])
+        match: (?<=^|[.\\;,#"\]\[)(}{><|\s])\*(?=$|[.\\;,#"\]\[)(}{><|\s])
       - name: keyword.operator.rzk
         match: (?<!(?<=^|[.\\;,#"\]\[)(}{><|\s])-)>|[\\|<]
 scopeName: source.rzk

@@ -2,3 +2,10 @@
 .vscode-test/**
 .gitignore
 vsc-extension-quickstart.md
+
+convert_yml_to_json.sh
+process_jinja_templates.py
+requirements.txt
+
+syntaxes/*.yml
+syntaxes/*.yaml
